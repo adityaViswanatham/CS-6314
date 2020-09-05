@@ -1,0 +1,56 @@
+footer {
+    width: 100%;
+    height: 40px;
+    background-color:#212529;
+    position: fixed;
+    bottom: 0px;
+    text-align: center;
+    color: white;
+}
+
+body {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.box {
+    float: left;
+    margin-right: 15px;
+}
+
+.location {
+    margin: 100px;
+}
+
+img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.grid {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.col-sm {
+    background-color: #E8E8E8;
+    padding: 0;
+    text-align: center;
+}
+
+.col-sm-8 {
+    margin-bottom: 45px;
+    padding:0;
+}
+
+.links {
+    display: inline-grid;
+    margin: 15px;
+}
+
+h4 {
+    margin-bottom: 25px;
+}
+
