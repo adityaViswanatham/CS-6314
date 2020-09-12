@@ -116,3 +116,10 @@ h1 {
     text-align: left;
     padding-bottom: 100px;
 }
+
+#sideColu {
+    padding: 0;
+    text-align: center;
+    height: 100vh;
+    overflow-y: scroll;
+}
