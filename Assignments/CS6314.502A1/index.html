@@ -29,13 +29,13 @@
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Projects</a>
+                <a class="nav-link" href="#projects">Projects</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="#contact">Contact</a>
             </li>
             </ul>
         </div>
@@ -54,32 +54,116 @@
             </div>
         </div>
         <div id="colu" class="col-sm-9">
-            <div class="section">
-                <div id="about" class="about">
-                    <div class="box">
-                        <img src='./Img/profile-picture.jpg' alt="Profile Picture" id="profpic">
+            <div class="container">
+                <div class="section">
+                    <div id="about" class="about">
+                        <h1>About Me</h1>
+                        <div class="box">
+                            <img src='./Img/profile-picture.jpg' alt="Profile Picture" id="profpic">
+                        </div>
+                        <p>
+                            My name is <span id="name">Aditya Viswanatham</span>. I am a graduate student studying Computer Science at <span>The University of Texas at Dallas</span>.<br />
+                            I moved to the United States in 2016 to pursue my undergraduate degree.
+                        </p>
+                        <h4><u>Work Experience</u></h4>
+                        <p>
+                            I worked as a Software Engineer Intern at <span id="comp">Cisco Systems Inc</span>.<br />
+                            I worked for <span id="comp2">Biggs Realty</span> to help develop their AI based chat tool.<br />
+                            I worked as Student Worker at the Computer Science Mentor Center.
+                        </p>
+                        <h4><u>Skills</u></h4>
+                        <p>
+                            Languages: JAVA, Python, JavaScript, C++, HTML, Bash, SQL <br />
+                            Tools and Technology: Git (GitHub, GitLab), Jenkins, React, CSS, Bootstrap, MongoDB, Apollo, GraphQL, Twilio, Express, TensorFlow (Python, JS), GCP, Maven, NPM, JWT
+                        </p>
                     </div>
-                    <h1>About Me</h1>
-                    <p>
-                        My name is <span id="name">Aditya Viswanatham</span>. I am a graduate student studying Computer Science at <span>The University of Texas at Dallas</span>.<br />
-                        I moved to the United States in 2016 to pursue my undergraduate degree.
-                    </p>
-                    <h4><u>Work Experience</u></h4>
-                    <p>
-                        I worked as a Software Engineer Intern at <span id="comp">Cisco Systems Inc</span>.
-                        I worked for <span id="comp2">Biggs Realty</span> to help develop their AI based chat tool.
-                        I worked as Student Worker at the Computer Science Mentor Center.
-                    </p>
-                    <h4><u>Skills</u></h4>
-                    <p>
-                        Languages: JAVA, Python, JavaScript, C++, HTML, Bash, SQL <br />
-                        Tools and Technology: Git (GitHub, GitLab), Jenkins, React, CSS, Bootstrap, MongoDB, Apollo, GraphQL, Twilio, Express, TensorFlow (Python, JS), GCP, Maven, NPM, JWT
-                    </p>
+                    <hr />
                 </div>
-                <hr />
-            </div>
-            <div class="section">
-                <hr />
+                <div class="section">
+                    <div id="projects">
+                        <h1>Projects</h1>
+                        <h4><a href="https://github.com/av-2599/DNN-Chatbot">DNN Chatbot</a></h4>
+                        <ul>
+                            <li>Programmed a chatbot that uses Deep Neural Networks, Python's TensorFlow and NLTK libraries to respond to user queries.</li>
+                        </ul>
+                        <div class="langs">
+                            Technologies Used:
+                                <img src="./Img/icons8-python.svg">
+                                <img src="./Img/icons8-nodejs.svg">
+                                <img src="Img/icons8-react-native.svg">
+                                <img src="Img/icons8-apollo.svg">
+                                <img src="Img/icons8-graphql.svg">
+                                <img src="Img/icons8-mongodb.svg">
+                        </div>
+                        <h4><a href="https://github.com/av-2599/Multi-Dimensional-Search">Multi-Dimensional Search</a></h4>
+                        <ul>
+                            <li>Designed an inventory search algorithm that works similar to those in industrial websites</li>
+                            <li>Utilized JAVA’s Map and Set Interfaces to create a database of object references for inventory.</li>
+                        </ul>
+                        <div class="langs">
+                            Technologies Used:
+                                <img src="./Img/icons8-java.svg">
+                        </div>
+                        <h4><a href="https://github.com/av-2599/Integral-Calculator">Integral Calculator</a></h4>
+                        <ul>
+                            <li>Designed a program that evaluates definite and indefinite integral equations using BSTs.</li>
+                            <li>The program is designed to perform various tree traversals to integrate equations.</li>
+                            <li>The payload for the binary search tree holds both the coefficient and the exponent values.</li>
+                        </ul>
+                        <div class="langs">
+                            Technologies Used:
+                                <img src="./Img/icons8-java.svg">
+                        </div>
+                        <h4><a href="https://github.com/av-2599/Expressions">Expressions</a></h4>
+                        <ul>
+                            <li>Implemented the Shunting Yard algorithm for a program to evaluate simple mathematic expressions.</li>
+                            <li>The program achieves conversions from infix to postfix and infix to expression trees</li>
+                        </ul>
+                        <div class="langs">
+                            Technologies Used:
+                                <img src="./Img/icons8-java.svg">
+                        </div>
+                        <h4><a href="https://github.com/av-2599/Skip-List">Skip-List</a></h4>
+                        <ul>
+                            <li>Implemented an enhanced linked list with a time complexity of O(logn) for insertion and deletion.</li>
+                            <li>The payload for the list holds a numeric value and an array of pointers referencing the nodes ahead.</li>
+                        </ul>
+                        <div class="langs">
+                            Technologies Used:
+                                <img src="./Img/icons8-java.svg">
+                        </div>
+                        <h4><a href="https://github.com/av-2599/Suffix-Array">Suffix Array</a></h4>
+                        <ul>
+                           <li>Implemented a suffix array using Three-Way Radix QuickSort to detect common substrings.</li>
+                        </ul>
+                        <div class="langs">
+                            Technologies Used:
+                                <img src="./Img/icons8-java.svg">
+                        </div>
+                        <h4><a href="https://github.com/av-2599/Professor-Portfolio">Portfolio Landing Page</a></h4>
+                        <ul>
+                           <li>Created a personal portfolio page using React Components. Used CSS, Bootstrap for styling the page.</li>
+                        </ul>
+                        <div class="langs">
+                            Technologies Used:
+                                <img src="./Img/icons8-react-native.svg">
+                                <img src="Img/icons8-html-5.svg">
+                                <img src="Img/icons8-css3.svg">
+                                <img src="Img/icons8-bootstrap.svg">
+                                <img src="Img/icons8-javascript.svg">
+                        </div>
+                    </div>
+                    <hr />
+                </div>
+                <div class="section">
+                    <div id="contact">
+                        <h1>Contact</h1>
+                        You can reach out to me at:
+                        <p><span>a.r.viswanatham@gmail.com</span> (or) <br />
+                            <span>arv160730@utdallas.edu</span>
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="col-sm-2 bg-light" id="giphyCol">
