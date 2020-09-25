@@ -1,0 +1,25 @@
+/*
+    Name: Aditya Viswanatham
+    NetID: arv160730
+    CS 6314.502 PW4
+*/
+
+table,th,td {
+    border : 1px solid black;
+    border-collapse: collapse;
+}
+
+th,td {
+    padding: 5px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#demo {
+    margin-top: 10px;
+}
