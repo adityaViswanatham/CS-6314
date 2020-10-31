@@ -35,7 +35,8 @@
 					</select>
 					<script type="text/javascript">
 						document.getElementById('year').value = "<?php echo $_GET['year'];?>";
-  					</script>
+                    </script>
+                      
 					<select name="gender" id="gender">
 						<option value="m">Male</option>
                         <option value="f">Female</option>
@@ -44,7 +45,8 @@
 					</select>
 					<script type="text/javascript">
 						document.getElementById('gender').value = "<?php echo $_GET['gender'];?>";
-  					</script>
+                    </script>
+                      
 					<input type="submit" name="Submit">
 				</form>
 			</div>
