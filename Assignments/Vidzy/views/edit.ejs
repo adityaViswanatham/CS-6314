@@ -1,0 +1,27 @@
+<%- include ('./partials/header') %>
+
+<div class="container">
+    <h1>Edit Movie</h1>
+    <form action="/videos/<%= video._id %>?_method=PATCH" method="POST">
+        <div class="form-group">
+            <input type="text" value="<%= video.title %>" name="title" class="form-control">
+        </div>
+        <div class="form-group">
+            <input type="text" value="<%= video.genre %>" name="genre" class="form-control">
+        </div>
+        <div class="form-group">
+            <input type="text" value="<%= video.image %>" name="image" class="form-control">
+        </div>
+        <div class="form-group">
+            <textarea name="desc" class="form-control">
+                <%= video.description %>
+            </textarea>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-info">Save and Edit</button>
+        </div>
+    </form>
+    <a href="/">Cancel</a>
+</div>
+
+<%- include ('./partials/footer') %>

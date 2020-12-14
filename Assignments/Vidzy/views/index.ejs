@@ -1,0 +1,36 @@
+<%- include ('./partials/header') %>
+
+<div class="jumbotron">
+    <h1 class="display-4">Vidzy Application</h1>
+    <p class="lead">This is a list of most popular videos</p>
+    <a class="btn btn-primary btn-lg" href="/videos/new" role="button">Add new video</a>
+</div>
+
+<!-- Search form -->
+<form action="/searchVideo" method="POST">
+    <input class="form-control" type="text" name="title" placeholder="Search" aria-label="Search">
+</form>
+<br />
+
+<form action="/filterVideo" method="POST">
+    <button type="submit" name="genre" value="SciFi" class="btn btn-primary">SciFi</button>
+    <button type="submit" name="genre" value="Drama" class="btn btn-secondary">Drama</button>
+    <button type="submit" name="genre" value="Fantasy" class="btn btn-success">Fantasy</button>
+</form>
+<br />
+
+
+<div class="container">
+    <div class="row">
+        <% videos.forEach(video => { %>
+            <div class="sm-col-3">
+                <img src="images/<%= video.image %>" style="width: 200px; height: 200px">
+                <div class="caption">
+                    <a href="videos/<%= video._id %>"><%= video.title %></p>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</div>
+
+<%- include ('./partials/footer') %>

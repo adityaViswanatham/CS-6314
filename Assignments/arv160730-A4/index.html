@@ -1,0 +1,90 @@
+<!-- Name: Aditya Viswanatham -->
+<!-- NetID: arv160730 -->
+<!-- CS 6314.502 A4 -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta content="utf-8" http-equiv="encoding">
+        <title>A4</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXYm5p4zBABiNki39XSd7tjeFnN5LS02c&callback=initialize&libraries=places">
+        </script>
+        <style type="text/css">
+            #map {
+                height: 100%;
+            }
+            html, body {
+                height: 100%;
+                margin: 0%;
+                padding: 0%;
+            }
+        </style>
+        <script>
+            let map;
+            let infoWindow;
+            let customLabel;
+
+            function initialize() {
+                map = new google.maps.Map(document.getElementById("map"), {
+                    center: { lat: -33.863276, lng: 151.207977 },
+                    zoom: 13,
+                });
+                geocoder = new google.maps.Geocoder();
+                infoWindow = new google.maps.InfoWindow;
+                customLabel = {
+                    restaurant: {
+                        label: 'C'
+                    },
+                    bar: {
+                        label: 'P'
+                    }
+                };
+            }
+
+            $(document).ready(() => {
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        let myObj = JSON.parse(this.responseText);
+                        for (let i in myObj) {
+                            let name = myObj[i].name;
+                            let address = myObj[i].address;
+                            let type = myObj[i].type;
+                            let point = new google.maps.LatLng(
+                                parseFloat(myObj[i].lat),
+                                parseFloat(myObj[i].lng));
+
+                            let infowincontent = document.createElement('div');
+                            let strong = document.createElement('strong');
+                            strong.textContent = name
+                            infowincontent.appendChild(strong);
+                            infowincontent.appendChild(document.createElement('br'));
+
+                            let text = document.createElement('text');
+                            text.textContent = address
+                            infowincontent.appendChild(text);
+                            let icon = customLabel[type] || {};
+                            let marker = new google.maps.Marker({
+                                map: map,
+                                position: point,
+                                label: icon.label
+                            });
+                            marker.addListener('click', function() {
+                                infoWindow.setContent(infowincontent);
+                                infoWindow.open(map, marker);
+                            });
+                        }
+                    }
+                };
+                xmlhttp.open("GET", "generateFile.php", true);
+                xmlhttp.send(); 
+            });
+        </script>
+    </head>
+    <body>
+		<div id="map"></div>
+    </body>
+</html>
